@@ -60,14 +60,13 @@ This project is configured to deploy automatically to GitHub Pages and serve fro
 
 ### Setup Instructions
 
-1. **Create a GitHub repository** and push your code:
+1. **Repository**: This project is hosted at [JovianX/jovianx-landing-page](https://github.com/JovianX/jovianx-landing-page)
+   
+   To push changes:
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/jovianx-landing-page.git
-   git push -u origin main
+   git commit -m "Your commit message"
+   git push origin main
    ```
 
 2. **Enable GitHub Pages**:
@@ -80,13 +79,13 @@ This project is configured to deploy automatically to GitHub Pages and serve fro
    - In your domain registrar (where you manage jovianx.com DNS), add these DNS records:
      - **Type**: `CNAME`
      - **Name**: `@` (or root domain)
-     - **Value**: `YOUR_USERNAME.github.io` (replace with your GitHub username)
+     - **Value**: `JovianX.github.io` (for organization repositories)
      - **OR** use A records:
        - `185.199.108.153`
        - `185.199.109.153`
        - `185.199.110.153`
        - `185.199.111.153`
-   - Also add a CNAME for `www` subdomain pointing to `YOUR_USERNAME.github.io`
+   - Also add a CNAME for `www` subdomain pointing to `JovianX.github.io`
 
 4. **Verify Domain**:
    - GitHub will automatically detect the CNAME file
