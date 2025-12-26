@@ -1,0 +1,250 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  overflow: hidden;
+}
+
+.navbar {
+  padding: 24px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLinks a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--text-primary);
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.heroWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.heroImage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  pointer-events: none;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  max-width: 900px;
+}
+
+.gradient {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.ctaSection {
+  width: 100%;
+  max-width: 600px;
+}
+
+.emailInput {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  background: white;
+  padding: 4px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.emailInput input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.primaryButton {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.ctaNote {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.heroGradient {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 968px) {
+  .heroWrapper {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .heroContent {
+    text-align: center;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    transform: none;
+    max-width: 100%;
+  }
+
+  .imageWrapper:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroWrapper {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .navLinks {
+    gap: 16px;
+  }
+
+  .navLinks a:not(.ctaButton) {
+    display: none;
+  }
+
+  .emailInput {
+    flex-direction: column;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+}
+
